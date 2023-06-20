@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30E53A67-C02C-45DB-9296-AB225E1601EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shopping.Dominio</RootNamespace>
+    <AssemblyName>Shopping.Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entidades\AreaBanner.cs" />
+    <Compile Include="Entidades\AtributoProduto.cs" />
+    <Compile Include="Entidades\AvaliacaoProduto.cs" />
+    <Compile Include="Entidades\Banner.cs" />
+    <Compile Include="Entidades\Categoria.cs" />
+    <Compile Include="Entidades\CategoriaSubCategoria.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\LojaUsuario.cs" />
+    <Compile Include="Entidades\TipoUsuario.cs" />
+    <Compile Include="Entidades\Estilo.cs" />
+    <Compile Include="Entidades\Departamento.cs" />
+    <Compile Include="Entidades\DepartamentoCategoria.cs" />
+    <Compile Include="Entidades\Fabricante.cs" />
+    <Compile Include="Entidades\FormaEntrega.cs" />
+    <Compile Include="Entidades\FormaPagamento.cs" />
+    <Compile Include="Entidades\Loja.cs" />
+    <Compile Include="Entidades\LojaBanner.cs" />
+    <Compile Include="Entidades\LojaDepartamento.cs" />
+    <Compile Include="Entidades\LojaFormaEntrega.cs" />
+    <Compile Include="Entidades\LojaFormaPagamento.cs" />
+    <Compile Include="Entidades\LojaSegmento.cs" />
+    <Compile Include="Entidades\LojaTipoFrete.cs" />
+    <Compile Include="Entidades\Marca.cs" />
+    <Compile Include="Entidades\ModeloProduto.cs" />
+    <Compile Include="Entidades\Newsletter.cs" />
+    <Compile Include="Entidades\Pagina.cs" />
+    <Compile Include="Entidades\Pedido.cs" />
+    <Compile Include="Entidades\Produto.cs" />
+    <Compile Include="Entidades\ProdutoFoto.cs" />
+    <Compile Include="Entidades\ProdutoSemelhante.cs" />
+    <Compile Include="Entidades\Segmento.cs" />
+    <Compile Include="Entidades\StatusPedido.cs" />
+    <Compile Include="Entidades\SubCategoria.cs" />
+    <Compile Include="Entidades\Tema.cs" />
+    <Compile Include="Entidades\TemaArquivo.cs" />
+    <Compile Include="Entidades\TipoBanner.cs" />
+    <Compile Include="Entidades\TipoEndereco.cs" />
+    <Compile Include="Entidades\TipoFrete.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Entidades\UsuarioEndereco.cs" />
+    <Compile Include="EntitiesValidation\CPFValidationAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{13fc9ab5-d4ca-42a1-9caf-f2c91f5fb32b}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,29 @@
+﻿@model List<Shopping.Dominio.Entidades.Cliente>
+@{
+    ViewBag.Title = "Lojas";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div id="box-products">
+    <div class="Box-Identificacao">
+    <h1>Clientes <span class="BtaoNewCad"><a class="btn-AddCar" title="CADASTRAR NOVO" href="/Admin/Cliente/Form/0">CADASTRAR NOVO</a></span></h1>
+        </div>
+    <br /><br /><br /><br />
+
+    <table class="box-table">
+        <tr>
+            <th scope="col" width="80%">Nome</th>
+            <th scope="col" width="80%">E-mail</th>
+            <th scope="col" align="center">Opções</th>
+        </tr>
+        @foreach(var item in Model) {
+        <tr>
+            <td>@item.NomeCompleto</td>
+            <td>@item.Email</td>
+            <td align="center"><a class="btn-AddCar btnEnt" title="EDITAR" href="/Admin/Cliente/Form/@item.Id">Editar</a></td>
+        </tr>
+        }
+    </table>
+
+</div>
+

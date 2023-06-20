@@ -1,0 +1,28 @@
+﻿@model Shopping.Dominio.Entidades.AreaBanner
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_LayoutLojista.cshtml";
+}
+<div id="box-products">
+    <div class="Box-Identificacao">
+    <h1>Cadastro de Área do Banner</h1>
+        </div>
+    <br /><br /><br /><br />
+    <form action="/Lojista/AreaBanner/Salvar" method="post">
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.DataDaInclusao)
+	<div class="divForm">
+		<label>NOME DA ÁREA:</label>
+		@Html.TextBoxFor(model => model.Nome, new { @class = "campo" })
+        <label>ESTILO CSS:</label>
+        @Html.DropDownListFor(m => m.EstiloId,  (IEnumerable<SelectListItem>)ViewData["Estilos"], new { @class = "campo" })
+		<label>DESCRIÇÃO:</label>
+		@Html.TextAreaFor(model => model.Descricao, new { @class = "campo textarea" })
+        <br /><br />
+        @Html.CheckBoxFor(model => model.Ativo, new { @checked = "checked"}) &nbsp; Ativo
+        <input type="submit" class="btn-AddCar Btn_End btnEnt btn-Form" value="Cadastrar" />
+        <br /><br /><br />
+	</div>
+     </form>
+</div>
+

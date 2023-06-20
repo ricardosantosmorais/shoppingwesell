@@ -1,0 +1,62 @@
+﻿@model ShoppingWesell.Areas.Admin.Models.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">	
+	<title>Shopping Wesell - Painel de Administração</title>
+	<meta name="description" content="" />	
+	<meta name="keywords" content="" />	
+	<meta name="generator" content="" />
+	<meta name="robots" content="index,follow" />
+	<meta name="author" content="www.silvanoamaral.com.br">
+	<link href="/Content/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="/Content/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/Content/js/jquery.min.js"> </script>
+	<script type="text/javascript" src="/Content/js/mascara.js"></script>
+	<script type="text/javascript" src="/Content/js/script.js"></script>
+</head>
+<body>
+<p id="voltar-top"><a href="#top"><span></span></a></p>
+<div id="geral">
+<div id="headerGeral">
+<div id="header" style="padding:60px !important;">
+			<!-- Logo Marca -->
+		<a title="samuelLOGO" href="../Default.html" id="header_logo"></a>
+			<!-- Input para buscar -->
+
+			<ul id="header_user" style="width:auto !important; position:static !important; padding-left:500px;">
+				<!--<li><a title="MINHA CONTA" href="javascript:void(0)" class="SemBorda-Menu">MINHA CONTA</a></li>-->
+			  <li style="font-size:24px; float:none !important;">PAINEL DE ADMINISTRA&Ccedil;&Atilde;O<span></span></li>
+			</ul>
+		<!-- menu-principal --></div>		
+</div>
+	<div class="container"> 
+		<br /><br />
+		<!-- conteudo do site -->		
+        <form method="post">
+	  <div class="BoxLogin" style="margin:auto !important; float:none !important;">
+	    <h1>LOGIN DE ADMINISTRA&Ccedil;&Atilde;O</h1>
+			<div>					
+				<label>E-MAIL</label>
+				@Html.TextBoxFor(model => model.Email, new { @maxlength = "100" })
+				<label><br />
+				  <br />
+			    SENHA</label>
+				@Html.PasswordFor(model => model.Senha, new { @maxlength = "16" })
+				<a href="javascript:void(0)" title="Esqueci minha senha" class="EsqueciSenha">Esqueci minha senha</a>
+                <input type="submit" class="btn-AddCar Btn_End btn-Form Logar" value="Entrar" />
+		    </div>
+      </div>
+            </form>
+</div><!-- fim da div container -->	
+	<!-- rodape do site -->
+	<div id="copyright">
+      <p><span>COPYRIGHT © 2013 <a href="javascript:void(0)">samuel el jackson</a></span>| <span> All rights reserved</span></p>
+    </div>
+</body>
+</html>

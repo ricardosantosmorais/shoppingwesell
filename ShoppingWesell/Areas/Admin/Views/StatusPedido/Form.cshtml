@@ -1,0 +1,24 @@
+﻿@model Shopping.Dominio.Entidades.StatusPedido
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div id="box-products">
+    <div class="Box-Identificacao">
+    <h1>Cadastro de Status de Pedido</h1>
+        </div>
+    <br /><br /><br /><br />
+    <form action="/Admin/StatusPedido/Salvar" method="post">
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.DataDaInclusao)
+	<div class="divForm">
+		<label>NOME DO MODELO:</label>
+		@Html.TextBoxFor(model => model.Nome, new { @class = "campo" })
+        <br /><br />
+        @Html.CheckBoxFor(model => model.Ativo, new { @checked = "checked"}) &nbsp; Ativo
+        <input type="submit" class="btn-AddCar Btn_End btnEnt btn-Form" value="Cadastrar" />
+        <br /><br /><br />
+	</div>
+     </form>
+</div>
+

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">	
+    <meta name="viewport" content="width=device-width" />
+	<title>Shopping Wesell - Painel de Administração</title>
+	<meta name="description" content="" />	
+	<meta name="keywords" content="" />	
+	<meta name="generator" content="" />
+	<meta name="robots" content="index,follow" />
+    <link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet" />
+</head>
+<body>
+<p id="voltar-top"><a href="#top"><span></span></a></p>
+<div id="geral">
+	<div id="headerGeral">
+		<div id="header">
+			<!-- Logo Marca -->
+			<a title="samuelLOGO" href="/" id="header_logo"></a>
+			
+			<!-- Input para buscar -->
+
+			<ul id="header_user" style="width:auto !important; padding-left:500px;">
+				<!--<li><a title="MINHA CONTA" href="javascript:void(0)" class="SemBorda-Menu">MINHA CONTA</a></li>-->
+			  <li style="font-size:24px; float:none !important;">PAINEL DE ADMINISTRA&Ccedil;&Atilde;O<span></span></li>
+			</ul>
+			<!-- menu-principal -->
+			<div id="menu-principal">
+				<ul>
+					<li class="sfHover">
+						<a title="Your Shopping Cart" href="javascript:void(0)">LOJAS<span class="indicator-category"> >></span></a>
+						<ul class="sub-menu">
+							<li><a title="" href="/Admin/Loja">Lojas</a></li>
+							<li><a title="" href="/Admin/Cliente">Cliente</a></li>
+							<li><a title="" href="/Admin/Tema">Tema</a></li>
+						</ul>
+					</li>
+					<li class="sfHover">
+						<a title="Your Shopping Cart" href="javascript:void(0)">BÁSICOS<span class="indicator-category"> >></span></a>
+						<ul class="sub-menu">
+							<li><a title="" href="/Admin/Marca">Marca</a></li>
+							<li><a title="" href="/Admin/TipoBanner">Tipo de Banner</a></li>
+							<li><a title="" href="/Admin/TipoEndereco">Tipo de Endereço</a></li>
+							<li><a title="" href="/Admin/TipoFrete">Tipo de Frete</a></li>
+							<li><a title="" href="/Admin/Fabricante">Fabricantes</a></li>
+							<li><a title="" href="/Admin/StatusPedido">Status do Pedido</a></li>
+							<li><a title="" href="/Admin/FormaEntrega">Forma de Entrega</a></li>
+							<li><a title="" href="/Admin/FormaPagamento">Forma de Pagamento</a></li>
+						</ul>
+					</li>
+					<li class="sfHover">
+						<a title="Your Shopping Cart" href="javascript:void(0)">PEDIDOS<span class="indicator-category"> >></span></a>
+						<ul class="sub-menu">
+							<li><a title="" href="javascript:void(0)">Relatório de Pedidos</a></li>
+						</ul>
+					</li>	
+					<li class="sfHover">
+						<a title="Your Shopping Cart" href="javascript:void(0)">USUÁRIOS<span class="indicator-category"> >></span></a>
+						<ul class="sub-menu">
+							<li><a title="" href="javascript:void(0)">Cadastros de Usuário</a></li>
+							<li><a title="" href="javascript:void(0)">Newsletter</a></li>
+						</ul>
+					</li>
+                    <!--
+					<li class="sfHover">
+						<a title="Your Shopping Cart" href="javascript:void(0)">TELEVENDAS<span class="indicator-category"> >></span></a>
+						<ul class="sub-menu">
+							<li><a title="" href="javascript:void(0)">sub menu 01</a></li>
+							<li><a title="" href="javascript:void(0)">sub menu 02</a></li>
+							<li><a title="" href="javascript:void(0)">sub menu 03</a></li>
+							<li><a title="" href="javascript:void(0)">sub menu 04</a></li>
+						</ul>
+					</li>	
+					<li class="sfHover">
+						<a title="Your Shopping Cart" href="javascript:void(0)">QUEM SOMOS<span class="indicator-category"> >></span></a>
+						<ul class="sub-menu">
+							<li><a title="" href="javascript:void(0)">sub menu 01</a></li>
+							<li><a title="" href="javascript:void(0)">sub menu 02</a></li>
+							<li><a title="" href="javascript:void(0)">sub menu 03</a></li>
+							<li><a title="" href="javascript:void(0)">sub menu 04</a></li>
+						</ul>
+					</li>
+                        -->	
+					<li><a title="Sair" href="javascript:void(0)" class="btnOutlet">&nbsp;&nbsp;&nbsp;SAIR</a></li>	
+				</ul>
+			</div>
+		</div>		
+	</div>
+	<div class="container"> 
+		
+        @RenderBody()
+
+	</div><!-- fim da div container -->	
+	<!-- rodape do site -->
+	<div id="copyright">
+      <p><span>COPYRIGHT © 2013 <a href="javascript:void(0)">SHOPPING WESELL</a></span>| <span> All rights reserved</span></p>
+    </div>
+
+</div>
+<script src="@Url.Content("~/Content/js/jquery-1.9.1.min.js")"></script>
+<script src="@Url.Content("~/Content/js/jquery.min.js")"></script>
+<script src="@Url.Content("~/Content/js/mascara.js")"></script>
+<script src="@Url.Content("~/Content/js/jquery.MultiFile.js")"></script>
+<script src="@Url.Content("~/Content/js/script.js")"></script>
+<script src="@Url.Content("~/Content/js/jquery.meio.mask.min.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>
+
+</body>
+</html>

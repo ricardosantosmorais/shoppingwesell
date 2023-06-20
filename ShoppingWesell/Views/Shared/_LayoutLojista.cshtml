@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">	
+	<title>Samuel</title>
+	<meta name="description" content="" />	
+	<meta name="keywords" content="" />	
+	<meta name="generator" content="" />
+	<meta name="robots" content="index,follow" />
+	<meta name="author" content="www.silvanoamaral.com.br">
+	<link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<p id="voltar-top"><a href="#top"><span></span></a></p>
+<div id="geral">
+	<div id="headerGeral">
+		<div id="header">
+			<!-- Logo Marca -->
+			<a title="samuelLOGO" href="Default.html" id="header_logo"></a>
+			
+			<!-- Input para buscar -->
+			<div id="Box-search">
+				<form id="searchbox" action="" method="get">					
+					<input type="text" onblur="if(this.value=='')this.value='';" onfocus="if(this.value=='')this.value='';" value="" name="search_query" id="search_query_top" class="search_query ac_input" autocomplete="off" value="Search">
+					<a href="javascript:document.getElementById('searchbox').submit();">Search</a>
+				</form>
+			</div>
+			
+			<ul id="header_user">
+				<!--<li><a title="MINHA CONTA" href="javascript:void(0)" class="SemBorda-Menu">MINHA CONTA</a></li>-->
+				<li><a href="javascript:void(0)" title="CARRINHO" class="SemBorda-Menu">CARRINHO</a>: (0 item)</li>
+				<li><a title="LOGIN" href="Login.html">LOGIN</a></li>
+				<li><a title="MEUS PEDIDOS" href="javascript:void(0)">MEUS PEDIDOS</a></li>				
+				<li>TELEVENDAS <span>(11)-1234-5678</span></li>
+			</ul>
+			<div id="detalhe_cart">				
+				<div class="block_content">
+					<div class="descProd">
+						<span class="quantity">1x</span>
+						<a title="Ut us dolor dapibus egetele" href="javascript:void(0)" >Ut us dolor...</a>
+						<span class="remove"><a href="javascript:void(0)" rel="nofollow"> </a></span>
+					</div>
+					<div>
+						<div class="cart-prices">
+							<span>Shipping</span>
+							<span class="prices">R$ 57,00</span>							
+						</div>
+						<div class="cart-prices">
+							<span>Total</span>
+							<span class="prices">R$ 222,00</span>							
+						</div>
+					</div>
+					<p id="cart-buttons">
+						<a title="Cart" class="button" href="javascript:void(0)">Cart</a>			
+						<a title="Check out" class="button" id="button_order_cart" href="javascript:void(0)"><span></span>Check out</a>
+					</p>
+				</div>
+			</div>
+
+
+            @Html.Action("Header", "Menu")
+
+		</div>		
+	</div>
+		
+    @RenderBody()
+
+	<!-- rodape do site -->
+	<div id="footerGeral">
+		<div id="footer">
+			<div id="footerlinks">
+				<div>	
+					<h4>INSTITUCIONAL</h4>
+					<ul>						
+						<li><a href="SobreLoja.html" title="Sobre a loja">Sobre a loja</a></li>
+						<li><a href="PoliticaPrivacidade.html" title="Política de Privacidade">Política de Privacidade</a></li>
+						<li><a href="Faleconosco.html" title="Localização">Localização</a></li>
+					</ul>
+				</div>
+				<div>	
+					<h4>AJUDA / SUPORTE</h4>
+					<ul>						
+						<li><a href="ComoComprar.html" title="Como comprar">Como comprar</a></li>
+						<li><a href="javascript:void(0)" title="Entregas">Entregas</a></li>
+						<li><a href="javascript:void(0)" title="Trocas">Trocas</a></li>
+								<li><a href="ComoPagar.html" title="Pagamento">Pagamento</a></li>
+						<li><a href="Login.html" title="Meus Pedidos">Meus Pedidos</a></li>
+					</ul>
+				</div>
+				<div class="divPagamento">	
+					<h4>FORMAS DE PAGAMENTO</h4>
+					<ul>						
+						<li><a href="javascript:void(0)" title="Cartão de Crédito">Cartão de Crédito</a></li>
+						<li><a href="javascript:void(0)" title="Política de Privacidade">Em até 6x sem juros</a></li>						
+					</ul>
+				</div>
+				<div class="divLast">	
+					<h4>REDES SOCIAIS</h4>
+					<ul>						
+						<li><a href="javascript:void(0)" title="Facebook" class="BannerRedeSocial" id="Facebook"></a><span>Facebook</span></li>
+						<li><a href="javascript:void(0)" title="Twitter" class="BannerRedeSocial" id="Twitter"></a><span>Twitter</span></li>						
+					</ul>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<div id="copyright">
+        <p><span>COPYRIGHT © 2013 <a href="javascript:void(0)">samuel el jackson</a></span>| <span> All rights reserved</span></p>
+    </div>
+	<!-- Div com fundo transparente -->	
+	<div id="Box-Overlay" ></div>	
+</div>
+
+<script type="text/javascript" src="@Url.Content("~/Content/js/jquery-1.9.1.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Content/js/jquery.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Content/js/script.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Content/js/jquery.bxslider.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Content/js/AtivarCarrossel.js")"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+</body>
+</html>

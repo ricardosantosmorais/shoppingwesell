@@ -1,0 +1,30 @@
+﻿@model Shopping.Dominio.Entidades.Estilo
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_LayoutLojista.cshtml";
+}
+<div id="box-products">
+    <div class="Box-Identificacao">
+    <h1>Cadastro de Estilo</h1>
+        </div>
+    <br /><br /><br /><br />
+    <br />
+    <form action="/Lojista/Estilo/Salvar" method="post" enctype="multipart/form-data">
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.DataDaInclusao)
+        @Html.HiddenFor(model => model.Caminho)
+	<div class="divForm">
+        @Html.ValidationMessage("Error")
+		<label>NOME DO ESTILO:</label>
+		@Html.TextBoxFor(model => model.Nome, new { @class = "campo" })
+        @Html.ValidationMessageFor(model => model.Nome)
+		<label>ARQUIVO CSS:</label>
+		<input name="Caminho" type="file" value="" class="campo" accept="css"/>
+        <br /><br />
+        @Html.CheckBoxFor(model => model.Ativo, new { @checked = "checked"}) &nbsp; Ativo
+        <input type="submit" class="btn-AddCar Btn_End btnEnt btn-Form" value="Cadastrar" />
+        <br /><br /><br />
+	</div>
+     </form>
+</div>
+

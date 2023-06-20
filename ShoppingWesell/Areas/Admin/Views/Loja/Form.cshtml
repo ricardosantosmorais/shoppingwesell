@@ -1,0 +1,64 @@
+﻿@model Shopping.Admin.Models.LojaViewModel
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div id="box-products">
+    <div class="Box-Identificacao">
+        <h1>Cadastro de Loja</h1>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <form action="/Admin/Loja/Salvar" method="post" id="form">
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.DataDaInclusao)
+        <div class="divForm">
+            @Html.ValidationMessage("Error")
+            <label>RAZÃO SOCIAL:</label>
+            @Html.TextBoxFor(model => model.RazaoSocial, new { @class = "campo" })
+            <label>NOME FANTASIA:</label>
+            @Html.TextBoxFor(model => model.NomeFantasia, new { @class = "campo" })
+            <label>NOME COMERCIAL:</label>
+            @Html.TextBoxFor(model => model.NomeComercial, new { @class = "campo" })
+            <label>CNPJ:</label>
+            @Html.TextBoxFor(model => model.Cnpj, new { @class = "campo" })
+            <label>INSCRIÇÃO ESTADUAL:</label>
+            @Html.TextBoxFor(model => model.IE, new { @class = "campo" })
+            <label>SITE:</label>
+            @Html.TextBoxFor(model => model.Site, new { @class = "campo" })
+            <label>LOGIN:</label>
+            <font size="19" style="font-size:22px; line-height:35px;">http://www.shoppingwesell.com.br/</font> @Html.TextBoxFor(model => model.Login, new { @class = "campo_medio2", @maxlength = "50" })
+            <label>ENDEREÇO + NÚMERO + COMPLEMENTO:</label>
+            @Html.TextBoxFor(model => model.Logradouro, new { @class = "campo_medio2" })
+            @Html.TextBoxFor(model => model.Numero, new { @class = "campo_pequeno" })
+            @Html.TextBoxFor(model => model.Complemento, new { @class = "campo_medio" })
+            <label>CEP + CIDADE:</label>
+            @Html.TextBoxFor(model => model.Cep, new { @class = "campo_medio2" })
+            @Html.TextBoxFor(model => model.Cidade, new { @class = "campo_medio2" })
+            <label>ESTADO + PAÍS:</label>
+            @Html.DropDownListFor(m => m.Estado, (IEnumerable<SelectListItem>)ViewData["Estado"], new { @class = "campo_medio2" })
+            @Html.DropDownListFor(m => m.Pais, (IEnumerable<SelectListItem>)ViewData["Pais"], new { @class = "campo_medio2" })
+            <br /><br />
+            <h3 style="font-size:26px;">Configurações</h3>
+
+		    <label>SELECIONE AS FORMAS DE PAGAMENTO:</label>
+		    @Html.ListBoxFor(x => x.FormaPagamentoSelecionadas, new MultiSelectList(new Shopping.InfraEstrutura.DAO.DAOFormaPagamento().Listar(), "Id", "Nome"), new { @class = "textarea" })
+		    <label>SELECIONE AS FORMAS DE ENTREGA:</label>
+		    @Html.ListBoxFor(x => x.FormaEntregaSelecionadas, new MultiSelectList(new Shopping.InfraEstrutura.DAO.DAOFormaEntrega().Listar(), "Id", "Nome"), new { @class = "textarea" })
+		    <label>SELECIONE OS TIPOS DE FRETE:</label>
+		    @Html.ListBoxFor(x => x.TipoFreteSelecionadas, new MultiSelectList(new Shopping.InfraEstrutura.DAO.DAOTipoFrete().Listar(), "Id", "Nome"), new { @class = "textarea" })
+		    <label>SELECIONE OS SEGMENTOS:</label>
+		    @Html.ListBoxFor(x => x.SegmentoSelecionadas, new MultiSelectList(new Shopping.InfraEstrutura.DAO.DAOSegmento().Listar(), "Id", "Nome"), new { @class = "textarea" })
+            <br />
+            <br />
+            @Html.CheckBoxFor(model => model.Ativo, new { @checked = "checked" }) &nbsp; Ativo
+        <input type="submit" class="btn-AddCar Btn_End btnEnt btn-Form" value="Cadastrar" />
+            <br />
+            <br />
+            <br />
+        </div>
+    </form>
+</div>
+

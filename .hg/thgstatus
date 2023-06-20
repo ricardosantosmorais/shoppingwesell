@@ -1,0 +1,13 @@
+mCommon/bin/Debug
+mCommon/obj/Debug
+mShopping.Autenticacao/bin/Debug
+mShopping.Autenticacao/obj/Debug
+mShopping.Dominio/bin/Debug
+mShopping.Dominio/obj/Debug
+mShopping.InfraEstrutura/DAO
+mShopping.InfraEstrutura/bin/Debug
+mShopping.InfraEstrutura/obj/Debug
+mShoppingWesell/Areas/Portal/Views/Home
+mShoppingWesell/Content/js
+mShoppingWesell/bin
+mShoppingWesell/obj/Debug

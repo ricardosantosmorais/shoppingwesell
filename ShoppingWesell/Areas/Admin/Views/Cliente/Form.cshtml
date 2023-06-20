@@ -1,0 +1,64 @@
+﻿@model Shopping.Dominio.Entidades.Cliente
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div id="box-products">
+    <div class="Box-Identificacao">
+        <h1>Cadastro de Cliente</h1>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <form action="/Admin/Cliente/Salvar" method="post" id="form">
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.DataDaInclusao)
+        <div class="divForm">
+            <label>NOME COMPLETO:</label>
+            @Html.TextBoxFor(model => model.NomeCompleto, new { @class = "campo" })
+            <label>APELIDO:</label>
+            @Html.TextBoxFor(model => model.Apelido, new { @class = "campo" })
+            <label>CPF:</label>
+            @Html.TextBoxFor(model => model.Cpf, new { @class = "campo" })
+            <label>EMAIL:</label>
+            @Html.TextBoxFor(model => model.Email, new { @class = "campo" })
+            <label>SENHA:</label>
+            @Html.PasswordFor(model => model.Senha, new { @class = "campo" })
+            <label>SEXO:</label>
+            @Html.DropDownListFor(m => m.SexoEnum, (IEnumerable<SelectListItem>)ViewData["Sexo"], new { @class = "campo_medio" })
+            <label>DDD + TELEFONE:</label>
+            @Html.TextBoxFor(model => model.DDDTelefone, new { @class = "campo_pequeno", @maxlength = "2" })
+            @Html.TextBoxFor(model => model.Telefone, new { @class = "campo_medio", @maxlength = "8" })
+            <label>DDD + CELULAR:</label>
+            @Html.TextBoxFor(model => model.DDDCelular, new { @class = "campo_pequeno", @maxlength = "2" })
+            @Html.TextBoxFor(model => model.Celular, new { @class = "campo_medio", @maxlength = "8" })
+            <label>DATA DE NASCIMENTO:</label>
+            @Html.DropDownListFor(model => model.DiaNascimento, (IEnumerable<SelectListItem>)ViewData["DiaNascimento"], new { @class = "campo_pequeno Dia" })
+            @Html.DropDownListFor(model => model.MesNascimento, (IEnumerable<SelectListItem>)ViewData["MesNascimento"], new { @class = "campo_pequeno Mes" })
+            @Html.DropDownListFor(model => model.AnoNascimento, (IEnumerable<SelectListItem>)ViewData["AnoNascimento"], new { @class = "campo_pequeno Ano" })
+            <label>CEP:</label>
+            @Html.TextBoxFor(model => model.Cep, new { @class = "campo_pequeno" })
+            <label>ENDEREÇO + NÚMERO + COMPLEMENTO:</label>
+            @Html.TextBoxFor(model => model.Logradouro, new { @class = "campo_medio2" })
+            @Html.TextBoxFor(model => model.Numero, new { @class = "campo_pequeno" })
+            @Html.TextBoxFor(model => model.Complemento, new { @class = "campo_medio" })
+            <label>BAIRRO + CIDADE:</label>
+            @Html.TextBoxFor(model => model.Bairro, new { @class = "campo_medio2" })
+            @Html.TextBoxFor(model => model.Cidade, new { @class = "campo_medio2" })
+            <label>ESTADO + PAÍS:</label>
+            @Html.DropDownListFor(m => m.Estado, (IEnumerable<SelectListItem>)ViewData["Estado"], new { @class = "campo_medio2" })
+            @Html.DropDownListFor(m => m.Pais, (IEnumerable<SelectListItem>)ViewData["Pais"], new { @class = "campo_medio2" });
+		<label>REFEÊNCIA DE ENDEREÇO:</label>
+            @Html.TextBoxFor(model => model.Referencia, new { @class = "campo" })
+            <br />
+            <br />
+            @Html.CheckBoxFor(model => model.Ativo, new { @checked = "checked" }) &nbsp; Ativo
+        <input type="submit" class="btn-AddCar Btn_End btnEnt btn-Form" value="Cadastrar" />
+            <br />
+            <br />
+            <br />
+        </div>
+    </form>
+</div>
+

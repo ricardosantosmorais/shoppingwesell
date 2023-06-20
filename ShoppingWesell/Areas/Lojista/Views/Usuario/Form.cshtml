@@ -1,0 +1,30 @@
+﻿@model Shopping.Dominio.Entidades.Usuario
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_LayoutLojista.cshtml";
+}
+<div id="box-products">
+    <div class="Box-Identificacao">
+    <h1>Cadastro de Usuário</h1>
+        </div>
+    <br /><br /><br /><br />
+    <form action="~/Lojista/Usuario/Salvar" method="post">
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.DataDaInclusao)
+	<div class="divForm">
+		<label>NOME DO USUÁRIO:</label>
+		@Html.TextBoxFor(model => model.Nome, new { @class = "campo" })
+		<label>SOBRENOME DO USUÁRIO:</label>
+		@Html.TextBoxFor(model => model.SobreNome, new { @class = "campo" })
+		<label>E-MAIL DO USUÁRIO:</label>
+		@Html.TextBoxFor(model => model.Email, new { @class = "campo" })
+		<label>SENHA DO USUÁRIO:</label>
+		@Html.TextBoxFor(model => model.Senha, new { @class = "campo" })
+        <br /><br />
+        @Html.CheckBoxFor(model => model.Ativo, new { @checked = "checked"}) &nbsp; Ativo
+        <input type="submit" class="btn-AddCar Btn_End btnEnt btn-Form" value="Cadastrar" />
+        <br /><br /><br />
+	</div>
+     </form>
+</div>
+

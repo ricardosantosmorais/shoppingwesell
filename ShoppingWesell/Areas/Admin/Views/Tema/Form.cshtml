@@ -1,0 +1,29 @@
+﻿@model Shopping.Dominio.Entidades.Tema
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div id="box-products">
+    <div class="Box-Identificacao">
+    <h1>Cadastro de Tema</h1>
+        </div>
+    <br /><br /><br /><br />
+    <br />
+    <form action="/Admin/Tema/Salvar" method="post" enctype="multipart/form-data">
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.DataDaInclusao)
+	<div class="divForm">
+		<label>NOME DO TEMA:</label>
+		@Html.TextBoxFor(model => model.Nome, new { @class = "campo" })
+		<label>DESCRIÇÃO DO TEMA:</label>
+		@Html.TextBoxFor(model => model.Descricao, new { @class = "campo" })
+		<label>ARQUIVO CSS:</label>
+		<input class="multi" type="file" name="uploadFiles" accept="gif|jpg"/>
+        <br /><br />
+        @Html.CheckBoxFor(model => model.Ativo, new { @checked = "checked"}) &nbsp; Ativo
+        <input type="submit" class="btn-AddCar Btn_End btnEnt btn-Form" value="Cadastrar" />
+        <br /><br /><br />
+	</div>
+     </form>
+</div>
+

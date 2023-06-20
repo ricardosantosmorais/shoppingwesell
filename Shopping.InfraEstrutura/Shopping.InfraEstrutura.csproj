@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC5B7CA8-A052-4A19-B9D3-472F8E130091}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shopping.InfraEstrutura</RootNamespace>
+    <AssemblyName>Shopping.InfraEstrutura</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Entity.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\DAOTema.cs" />
+    <Compile Include="DAO\DAOPagina.cs" />
+    <Compile Include="DAO\DAOUsuario.cs" />
+    <Compile Include="DAO\DAOSegmento.cs" />
+    <Compile Include="DAO\DAOEstilo.cs" />
+    <Compile Include="DAO\DAOCliente.cs" />
+    <Compile Include="DAO\DAOLoja.cs" />
+    <Compile Include="DAO\DAOSubCategoria.cs" />
+    <Compile Include="DAO\DAOCategoria.cs" />
+    <Compile Include="DAO\DAODepartamento.cs" />
+    <Compile Include="DAO\DAOFormaPagamento.cs" />
+    <Compile Include="DAO\DAOFormaEntrega.cs" />
+    <Compile Include="DAO\DAOStatusPedido.cs" />
+    <Compile Include="DAO\DAOAreaBanner.cs" />
+    <Compile Include="DAO\DAOFabricante.cs" />
+    <Compile Include="DAO\DAOTipoEndereco.cs" />
+    <Compile Include="DAO\DAOTipoBanner.cs" />
+    <Compile Include="DAO\DAOModeloProduto.cs" />
+    <Compile Include="DAO\DAOTipoFrete.cs" />
+    <Compile Include="DAO\DAOMarca.cs" />
+    <Compile Include="ShoppingEntities.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shopping.Dominio\Shopping.Dominio.csproj">
+      <Project>{30e53a67-c02c-45db-9296-ab225e1601ee}</Project>
+      <Name>Shopping.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

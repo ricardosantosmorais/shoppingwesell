@@ -1,0 +1,27 @@
+﻿@model List<Shopping.Dominio.Entidades.ModeloProduto>
+@{
+    ViewBag.Title = "Modelo";
+    Layout = "~/Views/Shared/_LayoutLojista.cshtml";
+}
+
+<div id="box-products">
+    <div class="Box-Identificacao">
+    <h1>Modelo de Produto <span class="BtaoNewCad"><a class="btn-AddCar" title="CADASTRAR NOVO" href="/Lojista/ModeloProduto/Form/0">CADASTRAR NOVO</a></span></h1>
+        </div>
+    <br /><br /><br /><br />
+
+    <table class="box-table">
+        <tr>
+            <th scope="col" width="80%">Nome</th>
+            <th scope="col" align="center">Opções</th>
+        </tr>
+        @foreach(var item in Model) {
+        <tr>
+            <td>@item.Nome</td>
+            <td align="center"><a class="btn-AddCar btnEnt" title="Editar" href="/Lojista/ModeloProduto/Form/@item.Id">Editar</a></td>
+        </tr>
+        }
+    </table>
+
+</div>
+
